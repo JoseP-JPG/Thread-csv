@@ -7,7 +7,7 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 public class Line_Threader extends Thread{
     //exp4j library used
     String line;
-    ArrayList<Line> h = new ArrayList<>();
+    ArrayList<Line> h;
     CountDownLatch cl;
 
     public Line_Threader(String line, ArrayList<Line> h, CountDownLatch cl){
