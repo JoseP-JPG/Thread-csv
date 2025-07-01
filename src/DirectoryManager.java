@@ -17,6 +17,7 @@ public class DirectoryManager {
         JFileChooser fcInput = new JFileChooser();
         fcInput.setCurrentDirectory(new File(System.getProperty("user.home")));
         fcInput.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        fcInput.setDialogTitle("Choose Input Folder:");
         fcInput.showOpenDialog(null);
 
         //System.out.println(fcInput.getCurrentDirectory());
@@ -24,6 +25,7 @@ public class DirectoryManager {
 
         JFileChooser fcOutput = new JFileChooser();
         fcOutput.setCurrentDirectory(new File(System.getProperty("user.home")));
+        fcOutput.setDialogTitle("Choose Output Folder and file name:");
         //fcOutput.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         fcOutput.setFileFilter(new FileNameExtensionFilter("csv file", "csv"));
         fcOutput.showSaveDialog(null);
